@@ -324,30 +324,33 @@ a:hover {
     flex-wrap: wrap;
 }
 
-.galleryimg,
 .photoplaceholder {
-    flex: 1 1 260px;
-    border-radius: 0.6rem;
-    border: 2px dashed #F7C5DD;
-}
-
-.galleryimg {
-    border-style: solid;
-    max-height: 320px;
-    object-fit: cover;
-}
-
-.photoplaceholder {
-    min-height: 220px;
+    flex: 1 1 240px;
+    min-width: 0;
+    max-width: 100%;
     background-color: #FFE5EC;
+    border: 2px dashed #F7C5DD;
+    border-radius: 0.6rem;
     color: #3C096C;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 1rem;
+    padding: 0.75rem;
     font-weight: 600;
 }
+
+.galleryimg {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 1px solid #F7C5DD;
+}
+
 
 .asciicard {
     background: transparent;
@@ -428,6 +431,24 @@ footer {
         width: 2rem;
         height: 2rem;
         font-size: 0.9rem;
+    }
+
+    .gallerygrid {
+        flex-direction: column;
+        gap: 0.9rem;
+    }
+
+    .photoplaceholder {
+        flex: none;
+        width: 100%;
+        min-height: auto;
+        padding: 0.6rem;
+    }
+
+    .galleryimg {
+        max-height: none;
+        width: 100%;
+        height: auto;
     }
 
     .projectsgrid {
