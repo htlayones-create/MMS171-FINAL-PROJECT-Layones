@@ -1,0 +1,449 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Google Sans', sans-serif;
+    background: linear-gradient(135deg, #ccbce9 0%, #f1dff7 100%);
+    color: #2D1236;
+    line-height: 1.6;
+    padding: 2rem 1.25rem;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.9rem;
+    color: #3C096C;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-family: 'Butterfly Kids', cursive;
+    font-size: 2.8rem;
+    color: #cf2672;
+    text-align: center;
+    margin-top: -0.5rem;
+    -webkit-text-stroke: 1px;
+}
+
+h2 {
+    font-family: 'Butterfly Kids', cursive;
+    font-size: 2.8rem;
+    color: #3C096C;
+    margin-bottom: 1.2rem;
+    margin-top: -1.2rem;
+    letter-spacing: 0.05rem;
+    border-bottom: 3px dashed #F7C5DD;
+    padding-bottom: 0.3rem;
+    font-weight: 400;
+    -webkit-text-stroke: 1.1px #3C096C;
+}
+
+h3 {
+    font-size: 1.25rem;
+    color: #cf2672;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+p, li {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+a {
+    color: #cf2672;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #3C096C;
+}
+
+.card {
+    background-color: #FFFDF0;
+    border: 2px solid #F7C5DD;
+    border-radius: 1rem;
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(90, 24, 154, 0.1);
+}
+
+.headercard {
+    background-color: #ffe3ea;
+    text-align: center;
+}
+
+.carouselbox {
+    position: relative;
+    width: 100%;
+    max-width: 26rem;
+    aspect-ratio: 4 / 3;
+    margin: 0 auto 1.4rem auto;
+}
+
+.carouselslide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    border: 2px solid #F7C5DD;
+}
+
+.carouselslide.active {
+    display: block;
+}
+
+.carouselbtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #FFFDF0;
+    color: #3C096C;
+    border: 2px solid #F7C5DD;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(60, 9, 108, 0.15);
+}
+
+.carouselbtn:hover {
+    background-color: #3C096C;
+    color: #FFFDF0;
+    border-color: #fdf6e0;
+}
+
+.prevbtn {
+    left: 0.65rem;
+}
+
+.nextbtn {
+    right: 0.65rem;
+}
+
+.bentorow {
+    display: flex;
+    gap: 1.75rem;
+    align-items: stretch;
+    margin-bottom: 2rem;
+}
+
+.bentorow .card {
+    margin-bottom: 0;
+    height: 100%;
+}
+
+.aboutsection {
+    flex: 1.15;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.lovesection {
+    flex: 0.85;
+    display: flex;
+    flex-direction: column;
+}
+
+.lovesection .biocontainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.sectionhint {
+    font-size: 0.9rem;
+    color: #3C096C;
+    margin-bottom: 0.85rem;
+}
+
+.profilephotocontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.profilephoto {
+    width: 18.25rem;
+    height: 18.25rem;
+}
+
+.greeting {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #cf2672;
+    margin-bottom: 0.8rem;
+}
+
+.biotext {
+    text-align: left;
+}
+
+.projectsgrid {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.projectarticle {
+    flex: 1;
+    background-color: #FFE5EC;
+    padding: 1.35rem;
+    border-radius: 0.75rem;
+    border: 1px solid #F7C5DD;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.projectimg {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    border: 1px solid #EBE3F7;
+}
+
+.reelbtnwrap {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.reelbtn {
+    display: inline-block;
+    background-color: #3C096C;
+    color: #FFFDF0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.reelbtn:hover {
+    background-color: #cf2672;
+    color: #FFFDF0;
+    text-decoration: none;
+}
+
+.lovelist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+.lovelistitem {
+    background-color: #FFE5EC;
+    padding: 0.85rem 1.15rem;
+    min-height: 3.2rem;
+    border-radius: 0.65rem;
+    font-size: 0.98rem;
+    margin-bottom: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.lovelistitem:hover {
+    transform: translateY(-2px);
+    background-color: #F7C5DD;
+}
+
+.lovelistitem a {
+    display: block;
+    width: 100%;
+    color: #2D1236;
+    font-weight: 600;
+}
+
+.lovelistitem a:hover {
+    color: #3C096C;
+    text-decoration: none;
+}
+
+.spotifywrap {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.spotifyembed {
+    display: block;
+    width: 100%;
+    min-height: 22rem;
+    border: 0;
+    border-radius: 0.75rem;
+}
+
+.topnav {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.homelink {
+    display: inline-block;
+    background-color: #FFFDF0;
+    color: #3C096C;
+    border: 2px solid #F7C5DD;
+    padding: 0.45rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 12px rgba(90, 24, 154, 0.08);
+}
+
+.homelink:hover {
+    background-color: #3C096C;
+    color: #FFFDF0;
+    border-color: #fdf6e0;
+    text-decoration: none;
+}
+
+.gallerygrid {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.galleryimg,
+.photoplaceholder {
+    flex: 1 1 260px;
+    border-radius: 0.6rem;
+    border: 2px dashed #F7C5DD;
+}
+
+.galleryimg {
+    border-style: solid;
+    max-height: 320px;
+    object-fit: cover;
+}
+
+.photoplaceholder {
+    min-height: 220px;
+    background-color: #FFE5EC;
+    color: #3C096C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.asciicard {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+}
+
+.asciiwrapper {
+    display: flex;
+    justify-content: center;
+    min-width: max-content;
+    margin: 0 auto;
+}
+
+.asciiart {
+    font-family: monospace;
+    font-size: 1rem;
+    line-height: 1.1;
+    color: #3C096C;
+    white-space: pre;
+    flex-shrink: 0;
+    transition: color 0.25s ease;
+}
+
+.asciiart:hover {
+    color: #cf2672;
+}
+
+.footersign {
+    font-family: monospace;
+    margin-bottom: 0.5rem;
+    white-space: pre-wrap;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #cf2672;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+
+    .bentorow {
+        flex-direction: column;
+        gap: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .bentorow .card {
+        height: auto;
+    }
+
+    .lovesection .biocontainer,
+    .lovelist {
+        display: block;
+    }
+
+    .lovelistitem {
+        display: block;
+        min-height: auto;
+        margin-bottom: 0.6rem;
+    }
+
+    .carouselbox {
+        max-width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+    .carouselbtn {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.9rem;
+    }
+
+    .projectsgrid {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 2.2rem;
+    }
+
+    .card {
+        padding: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+}
